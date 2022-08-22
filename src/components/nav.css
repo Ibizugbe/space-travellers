@@ -1,0 +1,8 @@
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+}
