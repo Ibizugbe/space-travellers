@@ -1,9 +1,13 @@
-function Mission() {
+import React from "react";
+
+const Mission = () => {
   return (
     <>
-      <h1>Hello</h1>
+      <main>
+        <h1>Mission</h1>
+      </main>
     </>
   );
-}
+};
 
 export default Mission;

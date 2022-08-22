@@ -6,18 +6,26 @@ const Nav = () => {
   return (
     <header>
       <nav>
-        <ul>
+        <ul className="nav-list">
           <li className="brand">Space Travellers' Hub</li>
-          <li className="nav-links">
-            <Link to="/" className="nav-link">
-              Rockets
-            </Link>
-            <Link to="/components/pages/Mission" className="nav-link">
-              Missions
-            </Link>
-            <Link to="/components/pages/Profile" className="nav-link">
-              My Profile
-            </Link>
+          <li>
+            <ul className="nav-links">
+              <li>
+                <Link to="/" className="nav-link">
+                  Rockets
+                </Link>
+              </li>
+              <li>
+                <Link to="/components/pages/Mission" className="nav-link">
+                  Missions
+                </Link>
+              </li>
+              <li>
+                <Link to="/components/pages/Profile" className="nav-link">
+                  My Profile
+                </Link>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>

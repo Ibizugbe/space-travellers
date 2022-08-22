@@ -6,3 +6,18 @@ ul {
 .nav-link {
   text-decoration: none;
 }
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  padding: 10px 15px 10px 15px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}

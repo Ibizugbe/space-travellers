@@ -1,9 +1,13 @@
-function Profile() {
+import React from "react";
+
+const Profile = () => {
   return (
     <>
-      <h1>Mission</h1>
+      <main>
+        <h1>Profile</h1>
+      </main>
     </>
   );
-}
+};
 
 export default Profile;
