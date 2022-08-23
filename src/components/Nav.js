@@ -1,12 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './nav.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./nav.css";
+import planet from "./assets/planet.png";
 
 const Nav = () => (
   <header>
     <nav>
       <ul className="nav-list">
-        <li className="brand">Space Travellers Hub</li>
+        <li className="brand">
+          <img src={planet} alt="logo" className="brand-image" />
+          <p>Space Travellers Hub</p>
+        </li>
         <li>
           <ul className="nav-links">
             <li>

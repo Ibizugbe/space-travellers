@@ -1,6 +1,11 @@
 ul {
   padding: 0;
+  margin: 0;
   list-style: none;
+}
+
+p {
+  margin: 0;
 }
 
 .nav-link {
@@ -20,4 +25,17 @@ nav {
 .nav-links {
   display: flex;
   gap: 40px;
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 26px;
+}
+
+.brand-image {
+  height: 40px;
+  width: 40px;
 }
