@@ -19,7 +19,12 @@ function DisplayRockets(props) {
 
   return (
     <>
-      <div className="container"></div>
+      <ul className="rocket-container">
+        <li className="rocket">
+          <img src={image} alt="rocket" />
+          <div className="rocket-details"></div>
+        </li>
+      </ul>
     </>
   );
 }
