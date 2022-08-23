@@ -42,3 +42,19 @@ export const fetchRocketsAPI = () => async (dispatch) => {
       }
     });
 };
+
+// reducer
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case ADD_RESERVATION:
+      return [...state, action.payload];
+    case REMOVE_RESERVATION:
+      return state.filter((book) => book.item_id !== action.payload);
+    case GET_ROCKETS:
+      return [...action.payload];
+    default:
+      return state;
+  }
+};
+
+export default reducer;
