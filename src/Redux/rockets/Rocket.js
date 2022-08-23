@@ -28,8 +28,6 @@ export const fetchRocketsAPI = () => async (dispatch) => {
   await fetch(`${apiURL}`)
     .then((response) => response.json())
     .then((rocketList) => {
-      console.log("rocketList: ", rocketList);
-
       const arrangedList = rocketList.map((rocket) => ({
         id: rocket.rocket_id,
         name: rocket.rocket_name,
