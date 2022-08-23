@@ -1,13 +1,11 @@
-import React from "react";
+import React from 'react';
 
-const Rockets = () => {
-  return (
-    <>
-      <main>
-        <h1>Rockets</h1>
-      </main>
-    </>
-  );
-};
+const Rockets = () => (
+  <>
+    <main>
+      <h1>Rockets</h1>
+    </main>
+  </>
+);
 
 export default Rockets;
