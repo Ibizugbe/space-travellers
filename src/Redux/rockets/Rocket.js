@@ -5,3 +5,19 @@ const apiURL = "https://api.spacexdata.com/v3/rockets";
 
 // store
 const initialState = [];
+
+// actions
+export const addRocketReservation = (payload) => ({
+  type: ADD_RESERVATION,
+  payload,
+});
+
+export const removeRocketReservation = (payload) => ({
+  type: REMOVE_RESERVATION,
+  payload,
+});
+
+export const getRockets = (payload) => ({
+  type: GET_ROCKETS,
+  payload,
+});
