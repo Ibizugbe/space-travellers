@@ -1,13 +1,20 @@
-import { configureStore, combineReducers, applyMiddleware } from 'redux';
+import {
+  applyMiddleware,
+  combineReducers,
+  configureStore,
+} from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import rocketReducer, { fetchRocketsAPI } from './rockets/rocket';
 
-const reducer = combineReducers({
+const rootReducer = combineReducers({
   rocketReducer,
 });
 
-const elementStore = configureStore(reducer, applyMiddleware(thunk, logger));
-elementStore.dispatch(fetchRocketsAPI());
+const myStore = configureStore(
+  { reducer: rootReducer },
+  applyMiddleware(thunk, logger),
+);
+myStore.dispatch(fetchRocketsAPI());
 
-export default elementStore;
+export default myStore;

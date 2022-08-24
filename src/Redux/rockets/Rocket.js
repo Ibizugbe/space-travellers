@@ -32,15 +32,16 @@ export const fetchRocketsAPI = () => async (dispatch) => {
   await fetch(`${apiURL}`)
     .then((response) => response.json())
     .then((rocketList) => {
-      const arrangedList = rocketList.map((rocket) => ({
+      const myRocketList = rocketList.map((rocket) => ({
         id: rocket.rocket_id,
         name: rocket.rocket_name,
+        rocketDescription: rocket.description,
         type: rocket.rocket_type,
         flickr_images: rocket.flickr_images,
         reservation: false,
       }));
-      if (arrangedList) {
-        dispatch(getRockets(arrangedList));
+      if (myRocketList) {
+        dispatch(getRockets(myRocketList));
       }
     });
 };
