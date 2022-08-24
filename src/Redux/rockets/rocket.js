@@ -1,7 +1,7 @@
-const ADD_RESERVATION = "space-travelers/rockets/ADD_ROCKET_RESERVATION";
-const REMOVE_RESERVATION = "space-travelers/rockets/REMOVE__ROCKET_RESERVATION";
-const GET_ROCKETS = "space-travelers/rockets/GET_ROCKETS";
-const apiURL = "https://api.spacexdata.com/v3/rockets";
+const ADD_RESERVATION = 'space-travelers/rockets/ADD_ROCKET_RESERVATION';
+const REMOVE_RESERVATION = 'space-travelers/rockets/REMOVE__ROCKET_RESERVATION';
+const GET_ROCKETS = 'space-travelers/rockets/GET_ROCKETS';
+const apiURL = 'https://api.spacexdata.com/v3/rockets';
 
 // store
 const initialState = [];
@@ -28,8 +28,6 @@ export const fetchRocketsAPI = () => async (dispatch) => {
   await fetch(`${apiURL}`)
     .then((response) => response.json())
     .then((rocketList) => {
-      console.log("rocketList: ", rocketList);
-
       const arrangedList = rocketList.map((rocket) => ({
         id: rocket.rocket_id,
         name: rocket.rocket_name,
