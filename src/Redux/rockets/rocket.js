@@ -28,11 +28,6 @@ export const fetchRocketsAPI = () => async (dispatch) => {
   await fetch(`${apiURL}`)
     .then((response) => response.json())
     .then((rocketList) => {
-<<<<<<< HEAD:src/Redux/rockets/Rocket.js
-      console.log('rocketList: ', rocketList);
-
-=======
->>>>>>> 4d0ea87024d45e0e5cdf2726701ad645dd309052:src/Redux/rockets/rocket.js
       const arrangedList = rocketList.map((rocket) => ({
         id: rocket.rocket_id,
         name: rocket.rocket_name,

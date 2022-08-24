@@ -1,6 +1,6 @@
 // actions type
-import axios from 'axios';
-import { createAsyncThunk } from '@reduxjs/toolkit';
+// import axios from 'axios';
+// import { createAsyncThunk } from '@reduxjs/toolkit';
 
 const JOIN_MISSION = 'space-travelers/mission/JOIN_MISSION';
 const LEAVE_MISSION = 'space-travelers/mission/LEAVE_MISSION';
@@ -39,15 +39,15 @@ const MissionReducer = (state = [], action) => {
 };
 
 export const fetchMissionsAPI = () => async (dispatch) => {
-  const res =await fetch(urlLink);
+  const res = await fetch(urlLink);
   const mission = await res.json();
-    const missionList = mission.map((mission) => ({
-          id: mission.mission_id,
-          name: mission.mission_name,
-          description: mission.description,
-         
+  const missionList = mission.map((mission) => ({
+    id: mission.mission_id,
+    name: mission.mission_name,
+    description: mission.description,
+
   }));
-  dispatch(fetchMission(missionList)); 
+  dispatch(fetchMission(missionList));
 };
 
 fetchMissionsAPI();
