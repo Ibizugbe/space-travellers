@@ -1,7 +1,12 @@
-import React from "react";
-import RocketProfile from "../rockets/RocketProfile";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import RocketProfile from '../rockets/RocketProfile';
 
 const Profile = () => {
+  const rocketList = useSelector((state) => state.rocketReducer);
+  const profileRocket = rocketList.filter(
+    (rocket) => rocket.reservation === true,
+  );
   return (
     <>
       <main>

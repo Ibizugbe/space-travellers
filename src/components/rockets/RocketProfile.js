@@ -1,15 +1,8 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { PropTypes } from "prop-types";
-import { removeRocketReservation } from "../../redux/rockets/rockets";
+import React from 'react';
+import { PropTypes } from 'prop-types';
 
-function RocketProfile() {
-  const dispatch = useDispatch();
+function RocketProfile(props) {
   const { id, name } = props;
-
-  const removeRocketReservation = () => {
-    dispatch(removeRocketReservation(id));
-  };
   return (
     <li className="reserved-rocket" id={id}>
       <h3>{name}</h3>
