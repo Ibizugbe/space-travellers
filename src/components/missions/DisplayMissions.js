@@ -1,12 +1,10 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { PropTypes } from 'prop-types';
-import { joinMission, leaveMission } from '../../Redux/missions/Mission';
+import React from "react";
+import { useDispatch } from "react-redux";
+import { PropTypes } from "prop-types";
+import { joinMission, leaveMission } from "../../Redux/missions/Mission";
 
 const DisplayMission = (props) => {
-  const {
-    id, name, description, reserved,
-  } = props;
+  const { id, name, description, reserved } = props;
   const dispatch = useDispatch();
 
   const handleJoinMission = () => {
@@ -19,18 +17,30 @@ const DisplayMission = (props) => {
 
   return (
     <tr>
-      <th>{name}</th>
-      <td>{description}</td>
+      <th scope="row">{name}</th>
+      <td className="col-lg-7">{description}</td>
       <td>
-        {reserved ? <span>Active Member</span> : <span>Not A Member</span>}
+        {reserved ? (
+          <span className="badge text-bg-primary">Active Member</span>
+        ) : (
+          <span className="badge text-bg-secondary">Not A Member</span>
+        )}
       </td>
       <td>
         {reserved ? (
-          <button type="button" onClick={handleLeaveMission}>
+          <button
+            type="button"
+            className="btn btn-outline-danger btn-sm"
+            onClick={handleLeaveMission}
+          >
             Leave Mission
           </button>
         ) : (
-          <button type="button" onClick={handleJoinMission}>
+          <button
+            type="button"
+            className="btn btn-outline-secondary test-small btn-sm"
+            onClick={handleJoinMission}
+          >
             Join Mission
           </button>
         )}
