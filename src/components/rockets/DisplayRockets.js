@@ -32,7 +32,7 @@ function DisplayRockets(props) {
             {reserved ? (
               <button
                 type="button"
-                className="remove-reservation"
+                className="btn btn-outline-secondary"
                 onClick={handleRemoveReserveClick}
               >
                 Cancel Reservation
@@ -40,7 +40,7 @@ function DisplayRockets(props) {
             ) : (
               <button
                 type="button"
-                className="add-reservation"
+                className="btn btn-primary"
                 onClick={handleReserveClick}
               >
                 Reserve Rocket
