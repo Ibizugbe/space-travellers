@@ -4,7 +4,6 @@ import DisplayMission from '../missions/DisplayMissions';
 
 const Mission = () => {
   const missions = useSelector((state) => state.mission);
-  console.log(missions);
   return (
     <table>
       <thead>
