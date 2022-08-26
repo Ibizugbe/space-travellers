@@ -17,46 +17,58 @@ const Profile = () => {
   return (
     <>
       <main>
-        <div className="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th>My Rocket Reservations</th>
-              </tr>
-            </thead>
-            <tbody>
-              {profileRocket.length ? (
-                profileRocket.map((item) => (
-                  <RocketProfile key={item.id} id={item.id} name={item.name} />
-                ))
-              ) : (
-                <tr className="empty">
-                  <td>No Rockets have been reserved</td>
-                </tr>
-              )}
-            </tbody>
-          </table>
-        </div>
+        <div className="container">
+          <div className="table-container row d-flex justify-content-center">
+            <div className="col-5">
+              <table className="col-6 table table-striped">
+                <thead>
+                  <tr>
+                    <th>My Rocket Reservations</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {profileRocket.length ? (
+                    profileRocket.map((item) => (
+                      <RocketProfile
+                        key={item.id}
+                        id={item.id}
+                        name={item.name}
+                      />
+                    ))
+                  ) : (
+                    <tr className="empty">
+                      <td>No Rockets have been reserved</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
 
-        <div className="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th>My Mission Reservations</th>
-              </tr>
-            </thead>
-            <tbody>
-              {profileMission.length ? (
-                profileMission.map((mission) => (
-                  <MissionProfile key={mission.id} id={mission.id} name={mission.name} />
-                ))
-              ) : (
-                <tr className="empty">
-                  <td>No Rockets have been reserved</td>
-                </tr>
-              )}
-            </tbody>
-          </table>
+            <div className="col-5">
+              <table className="col-6 table table-striped">
+                <thead>
+                  <tr>
+                    <th>My Mission Reservations</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {profileMission.length ? (
+                    profileMission.map((mission) => (
+                      <MissionProfile
+                        key={mission.id}
+                        id={mission.id}
+                        name={mission.name}
+                      />
+                    ))
+                  ) : (
+                    <tr className="empty">
+                      <td>No Rockets have been reserved</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </main>
     </>
