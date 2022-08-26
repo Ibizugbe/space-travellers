@@ -27,7 +27,7 @@
 
 To get a local copy up and running follow these simple example steps.
 
-- copy this link git@github.com:Ibizugbe/space-travellers.git
+- copy [this link](https://github.com/Ibizugbe/space-travellers).
 - get the directory that you want to clone the repository.
 - open the command prompt in this directory.
 - write git clone git@github.com:Ibizugbe/space-travellers.git
@@ -44,36 +44,35 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-- Clone the git repo using this command: git clone git@github.com:Ibizugbe/space-travellers.git
+- Clone the git repo using this command: ``` git cloneh ttps://github.com/Ibizugbe/space-travellers ```
 
 ### Run tests
 
-- npx hint . : To test html codes
-- npx stylelint "/*.{css,scss}"** : To test css code
-- npx eslint . : To test Eslint Report
+- ``` npx stylelint "/*.{css,scss}"** ```: To test css code
+- ``` npx eslint . ``` : To test Eslint Report
 
 ### To test the application
 
-- npm install --save-dev jest
-- npm test
+- ``` npm install --save-dev jest ```
+- ``` npm test ```
 
 ## Live Demo
 
 - [coming soon]()
 
-## Author
+## Authors
 
-👤 **Author1**
+👤 **Abraham Ibizugbe**
 
--[GitHub](https://github.com/Ibizugbe)
-- [Twitter](https://twitter.com/AbrahamIbizugbe)
--[LinkedIn](https://www.linkedin.com/in/abrahamibizugbe/ )
+- [Ibizugbe](https://github.com/Ibizugbe)
+- [abrahamibizugbe](https://twitter.com/AbrahamIbizugbe)
+- [Abraham Ibizugbe](https://www.linkedin.com/in/abrahamibizugbe/ )
 
-👤 **Author2**
+👤 **Rose Okpe**
 
--[GitHub](https://github.com/roseokpe)
--[Twitter](https://twitter.com/roseokpe)
--[LinkedIn](https://www.linkedin.com/in/rose-okpe-0334b5177/)
+- [GitHub](https://github.com/roseokpe)
+- [Twitter](https://twitter.com/roseokpe)
+- [LinkedIn](https://www.linkedin.com/in/rose-okpe-0334b5177/)
 
 ## Contributing
 
