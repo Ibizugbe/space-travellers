@@ -39,3 +39,7 @@ nav {
   height: 40px;
   width: 40px;
 }
+
+.nav-list li a.active {
+  border-bottom: 4px solid salmon;
+}
