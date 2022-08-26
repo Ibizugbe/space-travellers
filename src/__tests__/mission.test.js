@@ -15,5 +15,34 @@ it("renders correctly", () => {
       </Provider>
     </React.StrictMode>
   ).toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(tree).toMatchSnapshot(`
+<div
+  className="container-fluid px-5"
+>
+  <table
+    className="table table-hover table-striped table-responsive"
+  >
+    <thead>
+      <tr>
+        <th
+          scope="col"
+        >
+          Missions
+        </th>
+        <th
+          scope="col"
+        >
+          Description
+        </th>
+        <th
+          scope="col"
+        >
+          Status
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</div>
+`);
 });
