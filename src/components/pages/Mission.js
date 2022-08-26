@@ -1,7 +1,7 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import DisplayMission from "../missions/DisplayMissions";
-import "bootstrap/dist/css/bootstrap.css";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import DisplayMission from '../missions/DisplayMissions';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const Mission = () => {
   const missions = useSelector((state) => state.mission);

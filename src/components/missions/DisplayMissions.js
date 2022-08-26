@@ -1,10 +1,12 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { PropTypes } from "prop-types";
-import { joinMission, leaveMission } from "../../Redux/missions/Mission";
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { PropTypes } from 'prop-types';
+import { joinMission, leaveMission } from '../../Redux/missions/Mission';
 
 const DisplayMission = (props) => {
-  const { id, name, description, reserved } = props;
+  const {
+    id, name, description, reserved,
+  } = props;
   const dispatch = useDispatch();
 
   const handleJoinMission = () => {
