@@ -5,6 +5,7 @@ import {
   addRocketReservation,
   removeRocketReservation,
 } from '../../Redux/rockets/rocket';
+import 'bootstrap/dist/css/bootstrap.css';
 
 function DisplayRockets(props) {
   const dispatch = useDispatch();
@@ -21,10 +22,10 @@ function DisplayRockets(props) {
 
   return (
     <>
-      <ul className="rocket-container">
-        <li className="rocket">
-          <img src={image} alt="rocket" />
-          <div className="rocket-details">
+      <ul className="container-fluid mb-4">
+        <li className="rocket row">
+          <img src={image} alt="rocket" className="col-lg-3 col-md-5 col-12" />
+          <div className="rocket-details col-lg-9 col-md-7 col-12">
             <h2>{name}</h2>
             <p>
               {reserved && <span>Reserved</span>}
@@ -33,7 +34,7 @@ function DisplayRockets(props) {
             {reserved ? (
               <button
                 type="button"
-                className="remove-reservation"
+                className="btn btn-outline-secondary"
                 onClick={handleRemoveReserveClick}
               >
                 Cancel Reservation
@@ -41,7 +42,7 @@ function DisplayRockets(props) {
             ) : (
               <button
                 type="button"
-                className="add-reservation"
+                className="btn btn-primary"
                 onClick={handleReserveClick}
               >
                 Reserve Rocket

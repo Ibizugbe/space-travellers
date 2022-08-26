@@ -4,9 +4,9 @@ import { PropTypes } from 'prop-types';
 function RocketProfile(props) {
   const { id, name } = props;
   return (
-    <li className="reserved-rocket" id={id}>
-      <h3>{name}</h3>
-    </li>
+    <tr className="reserved-rocket" id={id}>
+      <td>{name}</td>
+    </tr>
   );
 }
 

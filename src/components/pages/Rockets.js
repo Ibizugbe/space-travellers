@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import DisplayRockets from '../rockets/DisplayRockets';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const Rockets = () => {
   const rocketList = useSelector((state) => state.rocketReducer);
