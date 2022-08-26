@@ -17,5 +17,9 @@ it('renders correctly', () => {
       </React.StrictMode>,
     )
     .toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(tree).toMatchInlineSnapshot(`
+<ul
+  className="my-rocket-list"
+/>
+`);
 });
