@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<main>
+  <div
+    className="container"
+  >
+    <div
+      className="table-container row d-flex justify-content-center"
+    >
+      <div
+        className="col-5"
+      >
+        <table
+          className="col-6 table table-striped"
+        >
+          <thead>
+            <tr>
+              <th>
+                My Rocket Reservations
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              className="empty"
+            >
+              <td>
+                No Rockets have been reserved
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div
+        className="col-5"
+      >
+        <table
+          className="col-6 table table-striped"
+        >
+          <thead>
+            <tr>
+              <th>
+                My Mission Reservations
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              className="empty"
+            >
+              <td>
+                No Rockets have been reserved
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+`;
