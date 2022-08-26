@@ -65,7 +65,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Live Demo
 
-- [coming soon]()
+- [Visit here](https://space-travellers-97.netlify.app/)
 
 ## Authors
 
