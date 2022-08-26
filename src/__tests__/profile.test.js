@@ -1,11 +1,11 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import { BrowserRouter } from "react-router-dom";
-import { Provider } from "react-redux";
-import store from "../Redux/configureStore";
-import Profile from "../components/pages/Profile";
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from '../Redux/configureStore';
+import Profile from '../components/pages/Profile';
 
-it("renders correctly", () => {
+it('renders correctly', () => {
   const tree = renderer
     .create(
       <React.StrictMode>
@@ -14,7 +14,7 @@ it("renders correctly", () => {
             <Profile />
           </BrowserRouter>
         </Provider>
-      </React.StrictMode>
+      </React.StrictMode>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
