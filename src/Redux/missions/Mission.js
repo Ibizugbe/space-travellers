@@ -1,7 +1,3 @@
-// actions type
-// import axios from 'axios';
-// import { createAsyncThunk } from '@reduxjs/toolkit';
-
 const JOIN_MISSION = 'space-travelers/mission/JOIN_MISSION';
 const LEAVE_MISSION = 'space-travelers/mission/LEAVE_MISSION';
 const FETCH_MISSION = 'space-travelers/mission/FETCH_MISSION';
@@ -9,34 +5,22 @@ const urlLink = 'https://api.spacexdata.com/v3/missions';
 
 export const joinMission = (id) => ({
   type: JOIN_MISSION,
-  id,
+  payload: {
+    id,
+  },
 });
 
-export const fetchMission = (id) => ({
+export const fetchMission = (payload) => ({
   type: FETCH_MISSION,
-  id,
+  payload,
 });
 
 export const leaveMission = (id) => ({
   type: LEAVE_MISSION,
-  id,
+  payload: {
+    id,
+  },
 });
-
-const MissionReducer = (state = [], action) => {
-  switch (action.type) {
-    case JOIN_MISSION:
-      return [...state.action.id];
-
-    case LEAVE_MISSION:
-      return state.filter((book) => book.id !== action.payload);
-
-    case FETCH_MISSION:
-      return [...action.id];
-
-    default:
-      return state;
-  }
-};
 
 export const fetchMissionsAPI = () => async (dispatch) => {
   const res = await fetch(urlLink);
@@ -45,11 +29,37 @@ export const fetchMissionsAPI = () => async (dispatch) => {
     id: mission.mission_id,
     name: mission.mission_name,
     description: mission.description,
-
   }));
   dispatch(fetchMission(missionList));
 };
 
-fetchMissionsAPI();
+// reducer
+const missionReducer = (state = [], action) => {
+  switch (action.type) {
+    case JOIN_MISSION: {
+      const updateState = state.map((mission) => {
+        if (mission.id !== action.payload.id) {
+          return mission;
+        }
+        return { ...mission, reserved: true };
+      });
+      return [...updateState];
+    }
 
-export default MissionReducer;
+    case LEAVE_MISSION: {
+      const updateState = state.map((mission) => {
+        if (mission.id !== action.payload.id) {
+          return mission;
+        }
+        return { ...mission, reserved: false };
+      });
+      return [...updateState];
+    }
+    case FETCH_MISSION:
+      return [...action.payload];
+    default:
+      return state;
+  }
+};
+
+export default missionReducer;
