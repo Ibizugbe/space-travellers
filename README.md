@@ -1,13 +1,14 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 ## # space-travellers
+
 > This application allows users to get a test of an adventure of a lifetime.
 
 ## Built With
 
 - HTML
 
-- Boostrap 
+- Boostrap
 
 - JavaScript
 
@@ -22,6 +23,12 @@
 - Stylelint (A mighty, modern linter that helps you avoid errors and enforce conventions in your styles).
 
 - ESlint (A mighty, modern linter that helps you avoid errors and enforce conventions in JavaScript codes)
+
+## Project Screenshots
+
+![Mission page](./screenshot/mission.png)
+![Rocket page](./screenshot/rocket.png)
+![Profile page](./screenshot/profile.png)
 
 ## Getting Started
 
@@ -44,17 +51,17 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-- Clone the git repo using this command: ``` git cloneh ttps://github.com/Ibizugbe/space-travellers ```
+- Clone the git repo using this command: `git cloneh ttps://github.com/Ibizugbe/space-travellers`
 
 ### Run tests
 
-- ``` npx stylelint "/*.{css,scss}"** ```: To test css code
-- ``` npx eslint . ``` : To test Eslint Report
+- `npx stylelint "/*.{css,scss}"**`: To test css code
+- `npx eslint .` : To test Eslint Report
 
 ### To test the application
 
-- ``` npm install --save-dev jest ```
-- ``` npm test ```
+- `npm install --save-dev jest`
+- `npm test`
 
 ## Live Demo
 
@@ -66,7 +73,7 @@ To get a local copy up and running follow these simple example steps.
 
 - [Ibizugbe](https://github.com/Ibizugbe)
 - [abrahamibizugbe](https://twitter.com/AbrahamIbizugbe)
-- [Abraham Ibizugbe](https://www.linkedin.com/in/abrahamibizugbe/ )
+- [Abraham Ibizugbe](https://www.linkedin.com/in/abrahamibizugbe/)
 
 👤 **Rose Okpe**
 
