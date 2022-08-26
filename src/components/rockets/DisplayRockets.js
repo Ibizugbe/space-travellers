@@ -1,16 +1,15 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { PropTypes } from 'prop-types';
+import React from "react";
+import { useDispatch } from "react-redux";
+import { PropTypes } from "prop-types";
 import {
   addRocketReservation,
   removeRocketReservation,
-} from '../../Redux/rockets/rocket';
+} from "../../Redux/rockets/rocket";
+import "bootstrap/dist/css/bootstrap.css";
 
 function DisplayRockets(props) {
   const dispatch = useDispatch();
-  const {
-    id, name, image, rocketDescription, reserved,
-  } = props;
+  const { id, name, image, rocketDescription, reserved } = props;
   const handleReserveClick = () => {
     dispatch(addRocketReservation(id));
   };
@@ -21,10 +20,10 @@ function DisplayRockets(props) {
 
   return (
     <>
-      <ul className="rocket-container">
-        <li className="rocket">
-          <img src={image} alt="rocket" />
-          <div className="rocket-details">
+      <ul className="container-fluid mb-4">
+        <li className="rocket row">
+          <img src={image} alt="rocket" className="col-lg-3 col-md-5 col-12" />
+          <div className="rocket-details col-lg-9 col-md-7 col-12">
             <h2>{name}</h2>
             <p>
               {reserved && <span>Reserved</span>}
