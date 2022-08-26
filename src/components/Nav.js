@@ -1,7 +1,7 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import "./nav.css";
-import planet from "./assets/planet.png";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import './nav.css';
+import planet from './assets/planet.png';
 
 const Nav = () => (
   <header>
