@@ -6,7 +6,7 @@ import {
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import rocketReducer, { fetchRocketsAPI } from './rockets/rocket';
-import missionReducer, { fetchMissionsAPI } from './missions/mission';
+import missionReducer, { fetchMissionsAPI } from './missions/Mission';
 
 const rootReducer = combineReducers({
   mission: missionReducer,
