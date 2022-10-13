@@ -2,7 +2,7 @@
 
 ## # space-travellers
 
-> This application allows users to get a test of an adventure of a lifetime.
+> This application works with real live data from the SpaceX API. It was build for a company that provides commercial and scientific space travel services. It allows users to book rockets and join selected space missions.
 
 ## Built With
 
